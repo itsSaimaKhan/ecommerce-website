@@ -6,14 +6,14 @@ const Contact = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center">
                 {/* Left Side: Text Section */}
                 <div className="text-left text-white">
-                    <h2 className="text-4xl font-bold mb-4">Let's Talk!</h2>
+                    <h2 className="text-4xl font-bold mb-4">Let is Talk!</h2>
                     <p className="mb-4 text-sm sm:text-base">
-                        Have any questions or feedback? Feel free to reach out to us.
-                        We're here to help and would love to hear from you.
+                        Have any questions or feedback? Feel free to reach out to us
+                        We are here to help and would love to hear from you
                     </p>
                     <p className="mb-6 text-sm sm:text-base">
                         You can fill out the contact form or reach us directly via
-                        email or phone. Let’s build something amazing together!
+                        email or phone Let is build something amazing together!
                     </p>
                     <div>
                         <p className="font-semibold mb-2">Email:</p>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Products() {
     interface Card {
       name: string;
@@ -79,7 +80,7 @@ export default function Products() {
               className="card group shadow-lg rounded-lg overflow-hidden bg-white transition-transform hover:scale-105 hover:shadow-xl"
             >
               {/* Card Image */}
-              <img
+              <Image
                 src={card.image}
                 alt={card.name}
                 className="w-full h-[200px] object-cover group-hover:opacity-90 transition-opacity hover:gray-"
