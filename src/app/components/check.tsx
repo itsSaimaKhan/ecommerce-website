@@ -142,27 +142,9 @@ const Check = () => {
           </div>
         </div>
       </main>
+      </div>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex justify-between">
-            <div>
-              <h4 className="font-bold">Furniro</h4>
-              <p>High Quality Furniture</p>
-            </div>
-            <div>
-              <ul className="space-y-2">
-                <li>Home</li>
-                <li>Shop</li>
-                <li>Contact</li>
-              </ul>
-            </div>
-          </div>
-          <p className="text-center mt-4">© 2024 Furniro. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
+     
   );
 };
 

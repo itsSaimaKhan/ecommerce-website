@@ -3,62 +3,106 @@ import Image from "next/image";
 export default function SubHero() {
   return (
     <>
+      {/* Sub Text */}
       <div
         className="subText"
         style={{
-          width: '559px',
-          height: '76.71px',
-          position: 'absolute',
-          top: '869px',
-          left: '449px',
-          textAlign: 'center', // Center align the text
+          textAlign: 'center', // Center-align all text
+          marginBottom: '30px', // Add spacing between text and images
         }}
       >
-        <h3 style={{ fontWeight: 'bold' }}>Browse The Range</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h3 style={{ fontWeight: 'bold', fontSize: '24px', marginBottom: '10px' }}>
+          Browse The Range
+        </h3>
+        <p style={{ fontSize: '14px' }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
       </div>
 
+      {/* Image Area */}
       <div
         className="imgArea"
         style={{
-          display: 'flex', // Flexbox for layout
-          justifyContent: 'center', // Center images horizontally
-          gap: '20px', // Space between images
-          marginTop: '100px', // Add spacing from the top
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '20px',
         }}
       >
-        <div className="imgOne" style={{ textAlign: 'center' }}>
+        {/* Dining Image with Text */}
+        <div
+          className="imgOne"
+          style={{
+            textAlign: 'center',
+            width: '282px',
+          }}
+        >
           <Image
             src="/image/image 106.png"
             width={282}
             height={200}
             alt="Dining"
           />
-          <h6>Dining</h6>
+          <h3
+            style={{
+              fontWeight: 'bold',
+              fontSize: '18px',
+              marginTop: '10px',
+            }}
+          >
+            Dining
+          </h3>
         </div>
 
-        <div className="imgTow" style={{ textAlign: 'center' }}>
+        {/* Living Image with Text */}
+        <div
+          className="imgTwo"
+          style={{
+            textAlign: 'center',
+            width: '282px',
+          }}
+        >
           <Image
             src="/image/living room.png"
             width={282}
             height={200}
             alt="Living"
           />
-          <h6>Living</h6>
+          <h3
+            style={{
+              fontWeight: 'bold',
+              fontSize: '18px',
+              marginTop: '10px',
+            }}
+          >
+            Living
+          </h3>
         </div>
 
-        <div className="imgThree" style={{ textAlign: 'center' }}>
+        {/* Bedroom Image with Text */}
+        <div
+          className="imgThree"
+          style={{
+            textAlign: 'center',
+            width: '282px',
+          }}
+        >
           <Image
             src="/image/Mask Group.png"
             width={282}
             height={200}
             alt="Bedroom"
           />
-          <h6>Bedroom</h6>
+          <h3
+            style={{
+              fontWeight: 'bold',
+              fontSize: '18px',
+              marginTop: '10px',
+            }}
+          >
+            Bedroom
+          </h3>
         </div>
       </div>
     </>
   );
 }
-
-
