@@ -14,11 +14,11 @@ export default function Home() {
     <div>
       <Hero />
       <SubHero />
-
-      <Products />
+     <Products />
+      <Slides />
       <Funicture />
 
-      <Slides />
+      
      <Check/>
     </div>
   );
