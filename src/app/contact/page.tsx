@@ -35,7 +35,7 @@ function Contact() {
             {/* Contact Info Section */}
             <section className="mt-16 text-center px-4 md:px-32">
                 <h2 className="text-3xl font-bold">Get In Touch With Us</h2>
-                <p className="mt-4 text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tempora libero aut, reiciendis, harum laboriosam quis minus quas maxime delectus sint dolores repudiandae, voluptate rerum nemo non corporis esse aspernatur?</p>
+                <p className="mt-4 text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit Ipsum tempora libero aut reiciendis harum laboriosam quis minus quas maxime delectus sint dolores repudiandae voluptate rerum nemo non corporis esse aspernatur?</p>
             </section>
 
             <div className="flex flex-col md:flex-row justify-between mt-12 gap-12 md:gap-16">
@@ -126,7 +126,7 @@ function Contact() {
             >
                 <div>
                     <h4 className="font-semibold text-lg">About Us</h4>
-                    <p className="text-gray-600 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p className="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
                 </div>
                 <div>
                     <h4 className="font-semibold text-lg">Quick Links</h4>

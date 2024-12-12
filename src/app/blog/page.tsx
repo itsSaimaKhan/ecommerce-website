@@ -2,10 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaCalendar, FaUserLarge } from 'react-icons/fa6';
-import { GiWoodenChair } from 'react-icons/gi';
+
 import { FaTag } from 'react-icons/fa';
 
-//import Page from '@/components/Ourpage';
+
 
 
 
@@ -74,11 +74,11 @@ function Blog() {
         </div>
         <h2 className="text-xl font-semibold mt-4">{post.title}</h2>
         <p className="mt-2 text-gray-700 line-clamp-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-        dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin
-         aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis
-          in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit 
-          ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.
+        Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et 
+        dolore magna aliqua Mus mauris vitae ultricies leo integer malesuada nunc In nulla posuere sollicitudin
+         aliquam ultrices Morbi blandit cursus risus at ultrices mi tempus imperdiet Libero enim sed faucibus turpis
+          in Cursus mattis molestie a iaculis at erat Nibh cras pulvinar mattis nunc sed blandit libero Pellentesque elit 
+          ullamcorper dignissim cras tincidunt Pharetra et ultrices neque ornare aenean euismod elementum
         </p>
         <Link
           href={`/blog/post-id-${index + 1}`} // Dynamic link based on post ID
@@ -138,8 +138,7 @@ function Blog() {
 
             <div className='justify-center mx-auto text-center'>
 
-                {/* <Page /> */}
-                {/* <Field /> */}
+           
             </div>
         </div>
     );
