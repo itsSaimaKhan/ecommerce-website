@@ -1,175 +1,127 @@
-import React from "react";
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { IoLocationSharp } from 'react-icons/io5'
+import { FaPhoneAlt } from 'react-icons/fa'
+import { BsFillClockFill } from 'react-icons/bs'
 
-const Contact = () => {
+
+
+function Contact() {
     return (
-        <div>
-            <section>
-                {/* Header Image with specific width, height, and top margin */}
-                <div className="flex justify-center mb-2" style={{ marginTop: '50px' }}>
-                    <img
-                        src="image/Rectangle 1.png" // Replace with your image URL
-                        alt="Contact Us"
-                        className="max-w-full h-auto rounded-md" // Ensures image is responsive and fits screen
-                    />
-                </div>
-
-                {/* Updated h1 with bold, width, height, and position */}
-                <h1
-                    className="text-black flex justify-center items-center font-bold"
-                    style={{
-                        width: '375px',
-                        height: '54px',
-                        marginTop: '30px', // Reduced margin-top to bring heading closer to image
-                        marginLeft: 'auto', 
-                        marginRight: 'auto', // Automatically center the heading
-                    }}
-                >
-                    Get In Touch With Us
+        <div className="max-w-screen-xl container mx-auto pb-8 px-4">
+             <div className='bg-[#faf4f4]'>
+                
+            </div>
+            {/* Banner Section */}
+            <div className="relative text-black">
+                <Image
+                    src="/image/Rectangle 1.png" // Replace with the correct image file path
+                    alt="Shop Banner"
+                    height={400}
+                    width={1600}
+                    className="w-full h-[200px] md:h-auto object-cover"
+                />
+                <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl md:text-5xl font-semibold ">
+                    Contact
                 </h1>
-                <p className="flex justify-center items-center mt-2">
-                    For More Information About Our Product & Services Please Feel Free To Drop Us
-                </p>
-                <p className="flex justify-center items-center mt-2">
-                    An Email Our Staff Always Be There To Help You Out Do Not Hesitate!
-                </p>
-            </section>
-
-            <section className="contact-section max-w-6xl mx-auto my-6 px-4 sm:px-8 py-6 sm:py-12 bg-white shadow-lg rounded-md">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-                    {/* Left Side: Text Section */}
-                    <div className="text-left text-gray-800">
-                        <h2 className="text-4xl font-bold mb-2">Address</h2>
-                        <p className="mb-2 text-sm sm:text-base">
-                            236 5th SE Avenue, New York NY10000, United States
-                        </p>
-
-                        <div>
-                            <h2 className="font-semibold mb-2">Email:</h2>
-                            <p className="text-black">
-                                Monday-Friday: 9:00 - 22:00
-                            </p>
-                            <p>Saturday-Sunday: 9:00 - 21:00</p>
-                        </div>
-                        <div className="mt-4">
-                            <h2 className="font-semibold mb-2">Phone:</h2>
-                            <p className="text-black">
-                                Mobile: +(84) 546-6789
-                            </p>
-                            <p>Hotline: +(84) 456-6789</p>
-                        </div>
-                    </div>
-
-                    {/* Right Side: Form Section */}
-                    <div className="contact-form bg-white shadow-md rounded-md p-4 sm:p-6">
-                        <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                            Contact Form
-                        </h3>
-                        <form>
-                            {/* Full Name */}
-                            <div className="mb-4">
-                                <label
-                                    htmlFor="name"
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                >
-                                    Full Name
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    placeholder="Enter your full name"
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    required
-                                />
-                            </div>
-
-                            {/* Email Address */}
-                            <div className="mb-4">
-                                <label
-                                    htmlFor="email"
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                >
-                                    Email Address
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    placeholder="Enter your email"
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    required
-                                />
-                            </div>
-
-                            {/* Message */}
-                            <div className="mb-6">
-                                <label
-                                    htmlFor="message"
-                                    className="block text-sm font-medium text-gray-700 mb-1"
-                                >
-                                    Your Message
-                                </label>
-                                <textarea
-                                    id="message"
-                                    placeholder="Write your message here"
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    rows={4}
-                                    required
-                                ></textarea>
-                            </div>
-
-                            {/* Submit Button */}
-                            <button
-                                type="submit"
-                                className="w-full bg-yellow-700 hover:bg-yellow-500 text-white py-3 rounded-md font-semibold text-sm sm:text-base transition duration-200"
-                            >
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
+                {/* Breadcrumb Section */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-14">
+                    <p className="text-gray-700 text-xs md:text-xl flex items-center">
+                        <Link href="/" className="font-bold hover:underline">Home</Link>
+                        <span className="font-bold mx-2">{'>'}</span>
+                        <Link href="/shop" className=" hover:underline">Contact</Link>
+                    </p>
                 </div>
-            </section>
+            </div>
 
-            {/* Box above the Footer */}
-            <div
-    className="box-container flex justify-between items-center gap-8"
+           {/* Contact Info Section */}
+<section className="mt-16 text-center px-4 md:px-32">
+    <h2 className="text-3xl font-bold">Get In Touch With Us</h2>
+    <p className="mt-4 text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum tempora libero aut, reiciendis, harum laboriosam quis minus quas maxime delectus sint dolores repudiandae, voluptate rerum nemo non corporis esse aspernatur?</p>
+</section>
+
+<div className="flex flex-col md:flex-row justify-between mt-12 gap-12 md:gap-16">
+    {/* Contact Details */}
+    <div className="flex flex-col gap-8">
+        <div className="flex items-center space-x-4 my-6">
+            <div>
+                <span className='flex'>
+                    <IoLocationSharp size={25} className="text-4xl text-primary" />
+                    <h3 className="font-semibold text-xl ml-4">Address</h3>
+                </span>
+                <p className='ml-10'>
+                    238 5<sup>th</sup> SE Avenue,
+                    <br /> New York NY10000,
+                    <br /> United States
+                </p>
+            </div>
+        </div>
+        <div className="flex items-center space-x-4 my-6">
+            <div>
+                <span className='flex'>
+                    <FaPhoneAlt size={25} className="text-4xl text-primary" />
+                    <h3 className="font-semibold ml-4 text-lg">Phone</h3>
+                </span>
+                <p className='ml-10'>Mobile : +(84)546-6789</p>
+                <p className='ml-10'>Hotline : +(84)546-6789</p>
+            </div>
+        </div>
+        <div className="flex items-center space-x-4 my-6">
+            <div>
+                <span className='flex'>
+                    <BsFillClockFill size={25} className="text-4xl text-primary" />
+                    <h3 className="ml-4 font-semibold text-lg">Working Time</h3>
+                </span>
+                <p className='ml-10'>Monday-Friday: 9:00 - 
+                    <br />22:00</p>
+                <p className='ml-10'>Saturday-Sunday: 9:00 - 
+                    <br />21:00</p>
+            </div>
+        </div>
+    </div>
+
+    {/* Contact Form Section */}
+    <div className="mt-16 bg-white rounded-lg p-8 md:w-1/2">
+        <form className="space-y-4">
+            <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">Your Name</label>
+                <input type="text" id="name" placeholder="Abc" className="w-full px-6 py-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+            </div>
+            <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700"> Email Address</label>
+                <input type="email" id="email" placeholder="Abc@def.com" className="w-full px-6 py-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+            </div>
+            <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700">Subject</label>
+                <input type="text" id="subject" placeholder="This is optional" className="w-full px-6 py-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary" />
+            </div>
+            <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Your Message</label>
+                <textarea id="message" placeholder="Hi, I would like to ask about..." rows={4} className="w-full px-6 py-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+            </div>
+        </form>
+        <button
+    type="submit"
+    className="mt-8 rounded-md"
     style={{
-        width: '1440px',
-        height: '270px',
-        top: '1560px',
-        paddingLeft: '100px',
-        paddingRight: '100px',
-        paddingBottom: '100px',
-        marginBottom: '20px', // optional, to separate box from footer
-        backgroundColor: '#faf3ea', // Box background color
+        width: '237px',
+        height: '55px',
+        
+        borderRadius: '5px',
+        backgroundColor: '#B88E2F',
+        color: '#fff', // Ensures the text color contrasts the background
+        fontWeight: 'bold',
     }}
 >
-    <div className="flex flex-col items-center">
-        <p className="font-semibold text-lg">High Quality</p>
+    Submit
+</button>
+
     </div>
-    <div className="flex flex-col items-center">
-        <p className="font-semibold text-lg">Warranty Protection</p>
-    </div>
-    <div className="flex flex-col items-center">
-        <p className="font-semibold text-lg">Free Shipping</p>
-    </div>
-    <div className="flex flex-col items-center">
-        <p className="font-semibold ">24 / 7 Support</p>
-    </div>
-    <div className="flex flex-col items-center">
-        <p className="font-semibold text-lg">Crafted from Top Materials</p>
-    </div>
-    <div className="flex flex-col items-center">
-        <p className="font-semibold text-lg">Over 2 Years</p>
-    </div>
-    <div className="flex flex-col items-center">
-        <p className="font-semibold text-lg">Order over 150 $</p>
-    </div>
-    <div className="flex flex-col items-center">
-        <p className="font-semibold text-lg">Dedicated Support</p>
-    </div>
-</div>
 </div>
 
-    );
-};
+        </div>
+    )
+}
 
 export default Contact;
