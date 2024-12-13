@@ -1,125 +1,164 @@
 import Image from "next/image";
 import Link from "next/link";
 
+interface Card {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  originalPrice?: number;
+  discount?: number;
+  image?: string;
+  isNew?: boolean;
+}
+
+const data: Card[] = [
+  {
+    id: 1,
+    name: 'Slytherine',
+    description: 'Stylish cafe chair',
+    price: 2500000,
+    originalPrice: 3500000,
+    discount: 30,
+    image: "/image/image1.jpg",
+  },
+  {
+    id: 2,
+    name: 'Leviosa',
+    description: 'Stylish cafe chair',
+    price: 2500000,
+    image: "/image/image2.jpg",
+  },
+  {
+    id: 3,
+    name: 'Lolito',
+    description: 'Luxury big sofa',
+    price: 7000000,
+    originalPrice: 14000000,
+    discount: 50,
+    image: "/image/image3.jpg",
+  },
+  {
+    id: 4,
+    name: 'Respira',
+    description: 'Outdoor bar table and stool',
+    price: 500000,
+    isNew: true,
+    image: "/image/image4.jpg",
+  },
+  {
+    id: 5,
+    name: 'Lolito',
+    description: 'Luxury big sofa',
+    price: 7000000,
+    originalPrice: 14000000,
+    
+    image: "/image/image5.jpg",
+  },
+  {
+    id: 6,
+    name: 'Slytherine',
+    description: 'Stylish cafe chair',
+    price: 2500000,
+    originalPrice: 3500000,
+    isNew: true,
+    image: "/image/image6.png",
+  },
+  {
+    id: 7,
+    name: 'Leviosa',
+    description: 'Stylish cafe chair',
+    price: 2500000,
+    discount: 30,
+    image: "/image/image7.jpg",
+  },
+  {
+    id: 8,
+    name: 'Respira',
+    description: 'Outdoor bar table and stool',
+    price: 500000,
+    isNew: true,
+    image: "/image/image8.jpg",
+  },
+];
 
 export default function Products() {
-  interface Card {
-    name: string;
-    age: number;
-    description: string;
-    image: string;
-    price: string;
-  }
-
-  const data: Card[] = [
-    {
-      name: "Syltherine",
-      price: "Rp 2.500.000",
-      age: 30,
-      image: "/image/image1.jpg",
-      description: "Stylish cafe chair",
-    },
-    {
-      name: "Jane Smith",
-      price: "Rp 2.500.000",
-      age: 25,
-      image: "/image/image2.jpg",
-      description: "A creative designer who loves creating stunning visuals.",
-    },
-    {
-      name: "Sam Wilson",
-      price: "Rp 2.500.000",
-      age: 28,
-      image: "/image/image3.jpg",
-      description: "A software engineer specializing in backend systems.",
-    },
-    {
-      name: "Sam Wilson",
-      price: "Rp 2.500.000",
-      age: 28,
-      image: "/image/image4.jpg",
-      description: "A software engineer specializing in backend systems.",
-    },
-  ];
-
   return (
-    <div className="products-container w-full py-12 px-8">
-      {/* Header */}
-      <h2 className="text-center font-bold text-2xl mb-8">Our Products</h2>
+    <section className="max-w-7xl mx-auto px-4 py-12">
+      <h2 className="text-3xl font-semibold text-center mb-10">Our Products</h2>
 
-      {/* Cards Container */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {data.map((card, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+        {data.map((product) => (
           <div
-            key={index}
-            className="card group shadow-lg overflow-hidden bg-white relative transition-transform hover:scale-105 hover:shadow-xl w-[285px] h-[446px] mx-auto"
+            key={product.id}
+            className="bg-white rounded-lg overflow-hidden shadow-sm relative group"
           >
-            {/* Card Content */}
-            <div className="relative group-hover:bg-gray-200 transition-all">
-              {/* Card Image */}
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+              <div className="space-y-3 px-4">
+                <Link href={`/shop/${product.id}`}>
+                  <button className="w-full bg-white text-gray-900 py-2 rounded hover:bg-gray-100 transition-colors">
+                    Add to cart
+                  </button>
+                </Link>
+
+                <div className="flex justify-center gap-6 text-white">
+                  <button className="flex items-center gap-1 hover:text-gray-200">
+                    <span>Share</span>
+                  </button>
+                  <button className="flex items-center gap-1 hover:text-gray-200">
+                    <span>Compare</span>
+                  </button>
+                  <button className="flex items-center gap-1 hover:text-gray-200">
+                    <span>Like</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative aspect-square">
               <Image
-                src={card.image}
-                alt={card.name}
-                width={285}
-                height={301}
-                className="w-full h-[301px] object-cover"
+                src={product.image || '/placeholder.jpg'} // Add fallback image
+                alt={product.name}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                className="w-full h-full object-cover"
               />
-              {/* Add to Cart Button */}
-              <Link href={`/cart?product=${card.name}`}>
-                <button
-                  className="absolute bg-white text-black text-sm font-semibold flex items-center justify-center rounded-md opacity-0 group-hover:opacity-100 transition-opacity"
-                  style={{
-                    width: "202px",
-                    height: "48px",
-                    top: "calc(50% - 24px)",
-                    left: "calc(50% - 101px)",
-                  }}
-                >
-                  Add to Cart
-                </button>
-              </Link>
-              
-            </div>
+             {product.discount && (
+  <span className="absolute top-[24px] left-[213px] bg-red-500 text-white w-[48px] h-[48px] flex items-center justify-center rounded-full text-sm">
+    -{product.discount}%
+  </span>
+)}
+{product.isNew && (
+  <span className="absolute top-[24px] left-[213px] bg-teal-500 text-white w-[48px] h-[48px] flex items-center justify-center rounded-full text-sm">
+    New
+  </span>
+)}
+
             
-
-            {/* Share, Compare, Like */}
-            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex justify-between items-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity w-[202px]">
-              <span
-                className="text-white text-center"
-                style={{ width: "32px", height: "24px", fontSize: "12px", lineHeight: "24px" }}
-              >
-                Share
-              </span>
-              <span
-                className="text-white text-center"
-                style={{ width: "32px", height: "24px", fontSize: "12px", lineHeight: "24px" }}
-              >
-                Compare
-              </span>
-              <span
-                className="text-white text-center"
-                style={{ width: "32px", height: "24px", fontSize: "12px", lineHeight: "24px" }}
-              >
-                Like
-              </span>
             </div>
 
-            {/* Card Description */}
-            <div className="card-body p-4 group-hover:bg-gray-200 transition-all h-[145px]">
-              <h5 className="font-semibold text-lg">{card.name}</h5>
-              <p className="text-gray-600 text-sm mt-2">{card.description}</p>
-              <h5 className="text-[#B88E2F] font-bold text-lg mt-4">{card.price}</h5>
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+              <p className="text-gray-600 mb-3">{product.description}</p>
+
+              <div className="flex items-center gap-3 mb-4">
+                <span className="font-semibold">
+                  Rp {product.price.toLocaleString()}
+                </span>
+                {product.originalPrice && (
+                  <span className="text-gray-500 line-through text-sm">
+                    Rp {product.originalPrice.toLocaleString()}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Show More Button */}
-      <div className="text-center mt-8">
-        <button className="text-[#B88E2F] px-6 py-3 border-2 border-[#B88E2F] rounded-md hover:bg-[#B88E2F] hover:text-white transition">
-          Show More
-        </button>
-      </div>
-    </div>
+      <button className="block mx-auto px-8 py-3 border-2 border-orange-300 text-orange-500 font-medium rounded hover:bg-orange-700 hover:text-black transition-colors">
+        Show More
+      </button>
+    </section>
   );
 }

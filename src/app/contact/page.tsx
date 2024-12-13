@@ -4,11 +4,12 @@ import Link from 'next/link';
 import { IoLocationSharp } from 'react-icons/io5';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { BsFillClockFill } from 'react-icons/bs';
+import Banfo from '../components/banfo';
 
 function Contact() {
     return (
-        <div className="max-w-screen-xl container mx-auto pb-8 px-4">
-            <div className="bg-[#faf4f4]"></div>
+        <div className="max-w-screen-xl  container mx-auto pb-15 px-0">
+            <div className="bg-[#faf4f4] "></div>
 
             {/* Banner Section */}
             <div className="relative text-black">
@@ -114,34 +115,8 @@ function Contact() {
                     </button>
                 </div>
             </div>
+            <Banfo/>
 
-            {/* Footer */}
-            <footer
-                className="w-[1440px] h-[270px] flex justify-between items-center mx-auto"
-                style={{
-                    paddingTop: '100px',
-                    paddingBottom: '100px',
-                    backgroundColor: '#FAF3EA',
-                }}
-            >
-                <div>
-                    <h4 className="font-semibold text-lg">About Us</h4>
-                    <p className="text-gray-600 mt-2">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-                </div>
-                <div>
-                    <h4 className="font-semibold text-lg">Quick Links</h4>
-                    <ul className="mt-2 space-y-1">
-                        <li><Link href="/home" className="text-gray-600 hover:text-black">Home</Link></li>
-                        <li><Link href="/shop" className="text-gray-600 hover:text-black">Shop</Link></li>
-                        <li><Link href="/contact" className="text-gray-600 hover:text-black">Contact</Link></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 className="font-semibold text-lg">Contact Us</h4>
-                    <p className="text-gray-600 mt-2">Email: support@example.com</p>
-                    <p className="text-gray-600">Phone: +123-456-7890</p>
-                </div>
-            </footer>
         </div>
     );
 }

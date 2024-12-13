@@ -42,9 +42,13 @@ export default function Header() {
           <MdPersonOutline className="cursor-pointer hover:text-gray-800" />
           <CiSearch className="cursor-pointer hover:text-gray-800" />
           <GoHeart className="cursor-pointer hover:text-gray-800" />
+          <Link href={'/cart'}>
           <AiOutlineShoppingCart className="cursor-pointer hover:text-gray-800" />
+          </Link>
         </div>
       </div>
     </>
   );
 }
+
+

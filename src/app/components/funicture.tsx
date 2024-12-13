@@ -1,85 +1,100 @@
+
+
+import React from "react";
 import Image from "next/image";
 
-export default function Funiture() {
+const FuniroFurniture = () => {
   return (
-    <div className="w-full pt-[30px] md:pt-[67px] pb-[50px] bg-lightBG relative">
-      {/* Text Section */}
-      <div className="text-center relative w-full md:top-5 top-0">
-        <h3 className="text-[14px] md:text-[20px] font-semibold text-Gray2">
-          Share your setup with
-        </h3>
-        <h2 className="text-[30px] md:text-[40px] font-bold text-Gray1">
-          #FuniroFurniture
-        </h2>
+    <section className="max-w-7xl mx-auto px-4 py-12">
+      <div className="text-center mb-10">
+        <p className="text-gray-600">Share your setup with</p>
+        <h2 className="text-3xl font-bold">#FuniroFurniture</h2>
       </div>
 
-      {/* Image Section */}
-      <div className="relative w-full h-[1000px]">
-        {/* First Image */}
-        <div
-          className="absolute"
-          style={{
-            top: "3957px",
-            left: -"196px",
-          }}
-        >
+      {/* Grid Layout */}
+      <div className="grid grid-cols-3 grid-rows-3 gap-4 relative">
+        {/* First Row */}
+        <div className="relative h-[250px] col-span-1 row-span-2">
           <Image
-            src="/image/Rectangle 37.png"
-            width={381 }
-            height={323}
-            alt="First Image"
+            src="/image/Rectangle 36.png"
+            alt="Workspace"
+            fill
+            className="object-cover rounded-lg"
           />
         </div>
-
-        {/* Second Image */}
-        <div
-          className="absolute"
-          style={{
-            top: "200px",
-            left: "400px",
-          }}
-        >
+        <div className="relative h-[250px] col-span-1 row-span-1">
           <Image
             src="/image/Rectangle 38.png"
-            width={344}
-            height={312}
-            alt="Second Image"
+            alt="Vintage radio"
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+        <div className="relative h-[250px] col-span-1 row-span-1">
+          <Image
+            src="/image/Rectangle 37.png"
+            alt="Dining room"
+            fill
+            className="object-cover rounded-lg"
           />
         </div>
 
-        {/* Third Image */}
-        <div
-          className="absolute"
-          style={{
-            top: "450px",
-            left: "100px",
-          }}
-        >
+        {/* Second Row */}
+        <div className="relative h-[200px] col-span-1 row-span-1">
           <Image
             src="/image/Rectangle 39.png"
-            width={451}
-            height={312}
-            alt="Third Image"
+            alt="Bedroom setup"
+            fill
+            className="object-cover rounded-lg"
           />
-           <div
-          className="absolute"
-          style={{
-            top: "3559px",
-            left: "-196px",
-          }}
-          >
-
-<Image
-            src="/image/Rectangle 36.png"
-            width={ 274}
-            height={382}
-            alt="Third Image"
-          />
-          </div>
-
-
         </div>
+
+        {/* Third Row */}
+        <div className="relative h-[250px] col-span-1 row-span-1">
+          <Image
+            src="/image/Rectangle 40.png"
+            alt="Vintage chair"
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+        <div className="relative h-[200px] col-span-1 row-span-1">
+          <Image
+            src="/image/Rectangle 41.png"
+            alt="Home decor"
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+        <div className="relative h-[250px] col-span-1 row-span-2">
+          <Image
+            src="/image/Rectangle 43.png"
+            alt="Kitchen area"
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+        <div className="relative h-[250px] col-span-1 row-span-2">
+          <Image
+            src="/image/Rectangle 44.png"
+            alt="Kitchen area"
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+        <div className="relative h-[250px] col-span-1 row-span-2">
+          <Image
+            src="/image/Rectangle 45.png"
+            alt="Kitchen area"
+            fill
+            className="object-cover rounded-lg"
+          />
+        </div>
+       
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default FuniroFurniture;
+
