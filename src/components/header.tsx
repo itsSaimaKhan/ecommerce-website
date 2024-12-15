@@ -37,7 +37,7 @@ export default function Header() {
           </ul>
         </div>
 
-        Icons Section
+        {/* Icons Section */}
         <div className="flex items-center space-x-6 text-2xl text-gray-600">
           <MdPersonOutline className="cursor-pointer hover:text-gray-800" />
           <CiSearch className="cursor-pointer hover:text-gray-800" />
