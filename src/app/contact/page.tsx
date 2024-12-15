@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { IoLocationSharp } from 'react-icons/io5';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { BsFillClockFill } from 'react-icons/bs';
-import Banfo from '../components/banfo';
+import Banfo from '../../components/banfo';
 
 function Contact() {
     return (
-        <div className="max-w-screen-xl  container mx-auto pb-15 px-0">
+        <div className="max-w-screen-2xl  container mx-auto pb-8 px-4">
             <div className="bg-[#faf4f4] "></div>
 
             {/* Banner Section */}
