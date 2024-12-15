@@ -8,6 +8,16 @@ function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-screen-xl mx-auto">
         {/* Address Section */}
         <div className='my-auto'>
+        <h1 
+  className="
+    font-bold w-[85px] h-[36px] mt-[48px] ml-[100px] 
+    sm:ml-[50px] sm:text-xl 
+    md:ml-[75px] md:text-2xl
+  "
+>
+  Funiro.
+</h1>
+
           {/* <h3 className="text-lg font-semibold mb-4">Address</h3> */}
           <p className="text-gray-600">400 University Drive Suite 200 Coral</p>
           <p className="text-gray-600">Gables, FL 33134 USA</p>
