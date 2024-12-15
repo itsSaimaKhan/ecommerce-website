@@ -8,7 +8,7 @@ import Banfo from '../../components/banfo';
 
 function Contact() {
     return (
-        <div className="max-w-screen-2xl  container mx-auto pb-8 px-4">
+        <div className="max-w-screen-xl  container mx-auto pb-8 px-4">
             <div className="bg-[#faf4f4] "></div>
 
             {/* Banner Section */}

@@ -7,7 +7,7 @@ const Banfo = () => {
     <div>
         
 
-        <div className='bg-[#FAF3EA]  h-[260px] w-[1400px] top-100px bottom-100px flex flex-col md:flex-row justify-between items-center p-5 md:p-10 my-5 md:my-10 gap-6 md:gap-0'>
+        <div className='bg-[#FAF3EA]  h-[260px] w-[1440px] top-100px bottom-100px flex flex-col md:flex-row justify-between items-center p-5 md:p-10 my-5 md:my-10 gap-6 md:gap-0'>
         <div className='flex items-center space-x-2'>
             <div>
                 <Image src={"/image/trophy 1.png"} width={50} height={50} alt='High Quality' />
@@ -18,7 +18,7 @@ const Banfo = () => {
             </div>
         </div>
 
-        <div className='flex items-center space-x-2'>
+        <div className='flex items-center space-x-1'>
             <div>
                 <Image src={"/image/guarantee.png"} width={50} height={50} alt='High Quality' />
             </div>
@@ -28,7 +28,7 @@ const Banfo = () => {
             </div>
         </div>
 
-        <div className='flex items-center space-x-2'>
+        <div className='flex items-center space-x-1'>
             <div>
                 <Image src={"/image/shipping.png"} width={50} height={50} alt='High Quality' />
             </div>
@@ -38,7 +38,7 @@ const Banfo = () => {
             </div>
         </div>
 
-        <div className='flex items-center space-x-2'>
+        <div className='flex items-center space-x-1'>
             <div>
                 <Image src={"/image/customer-support.png"} width={50} height={50} alt='High Quality' />
             </div>
