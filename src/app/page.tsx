@@ -5,6 +5,7 @@ import SubHero from "../components/subhero";
 import Products from "../components/products";
 import Slides from "../components/Slides";
 import Funicture from "../components/funicture";
+import ProductCards from "./Products/page";
 
 
 
@@ -15,6 +16,7 @@ export default function Home() {
       <SubHero />
       <Products/>
       <Slides />
+      <ProductCards/>
       <Funicture />
      
      
