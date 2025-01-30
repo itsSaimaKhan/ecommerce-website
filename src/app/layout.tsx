@@ -4,6 +4,14 @@ import "./globals.css";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  UserButton,
+} from "@clerk/clerk-react";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,9 +27,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Header/>
-        {children}
-        <Footer/>
+        <ClerkProvider>
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          <Header />
+
+          {children}
+          <Footer />
+        </ClerkProvider>
       </body>
     </html>
   );
