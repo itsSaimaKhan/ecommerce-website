@@ -4,13 +4,14 @@ import "./globals.css";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
-import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from "@clerk/clerk-react";
+// import {
+
+//   ClerkProvider,
+//   SignedIn,
+//   SignedOut,
+//   SignInButton,
+//   UserButton,
+// } from "@clerk/clerk-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,21 +26,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <ClerkProvider>
-          <SignedOut>
+    // <ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          <Header />
+          {/* <SignedOut>
             <SignInButton />
           </SignedOut>
           <SignedIn>
             <UserButton />
-          </SignedIn>
-          <Header />
+          </SignedIn> */}
 
           {children}
           <Footer />
-        </ClerkProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    // </ClerkProvider>
   );
 }
