@@ -1,6 +1,3 @@
-
-
-
 // import Image from "next/image";
 // import Link from "next/link";
 // import { MdPersonOutline } from "react-icons/md";
@@ -97,6 +94,7 @@ import { CiSearch } from "react-icons/ci";
 import { GoHeart } from "react-icons/go";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useState } from "react";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -111,6 +109,10 @@ export default function Header() {
           height={41}
           alt="Logo"
         />
+
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
 
       {/* Desktop Navigation Links */}
@@ -127,7 +129,12 @@ export default function Header() {
           </li>
           <li>
             <Link href={"/contact"}>Contact</Link>
-          </li>
+            </li>
+
+            <SignedOut>
+            <SignInButton />
+          </SignedOut>
+          
         </ul>
       </div>
 
